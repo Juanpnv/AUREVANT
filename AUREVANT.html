@@ -196,6 +196,10 @@ dialog.sheet{padding:0;max-width:480px}
 <div class="card"><h3 data-i="l1_h"></h3><p data-i="l1_p"></p><input id="phue" type="range" min="0" max="359" value="350" aria-label="Hue"><div class="pal" id="pal"></div><div class="row"><button class="btn sm" id="pmode" type="button"></button><button class="btn sm" id="prand" type="button"></button></div><p class="err" id="pcopy" role="status" style="color:var(--mut)"></p></div>
 <div class="card"><h3 data-i="l2_h"></h3><p data-i="l2_p"></p><canvas id="sim" width="480" height="300" aria-label="Particle simulation"></canvas><div class="row" style="margin-top:10px"><button class="btn sm" id="simgo" type="button"></button></div></div>
 <div class="card"><h3 data-i="l3_h"></h3><p data-i="l3_p"></p><label><span data-i="l3_in"></span><input id="lmw" autocomplete="off" maxlength="30"></label><div class="bars" id="lmb" aria-live="polite"></div><div class="gen" id="lmg" aria-live="polite"></div><div class="row" style="margin-top:10px"><button class="btn sm" id="lmgen" type="button"></button></div></div>
+<div class="card"><h3 data-i="l4_h"></h3><p data-i="l4_p"></p><div class="row"><label><span data-i="l4_fg"></span> <input id="cfg" type="color" value="#ffffff" style="width:56px;height:36px;padding:2px"></label><label><span data-i="l4_bg"></span> <input id="cbg" type="color" value="#050505" style="width:56px;height:36px;padding:2px"></label></div><div class="gen" id="csample" style="text-align:center;font-weight:700;margin-top:10px"></div><div class="bars" id="cres"></div></div>
+<div class="card"><h3 data-i="l5_h"></h3><p data-i="l5_p"></p><canvas id="life" width="480" height="300" aria-label="Game of Life"></canvas><div class="row" style="margin-top:10px"><button class="btn sm" id="lgo" type="button"></button><button class="btn sm" id="lrnd" type="button"></button><button class="btn sm" id="lclr" type="button"></button></div><p id="lgen" style="color:var(--mut);font-size:.85rem;margin:8px 0 0" aria-live="off"></p></div>
+<div class="card"><h3 data-i="l6_h"></h3><p data-i="l6_p"></p><div class="gen" id="pwout" style="font-family:monospace;word-break:break-all"></div><label><span id="pwlenl"></span><input id="pwlen" type="range" min="8" max="48" value="20"></label><div class="row"><label><input id="pwnum" type="checkbox" checked> <span data-i="pw_num"></span></label><label><input id="pwsym" type="checkbox" checked> <span data-i="pw_sym"></span></label></div><div class="bars" id="pwinfo" aria-live="polite"></div><div class="row"><button class="btn sm" id="pwgen" type="button"></button><button class="btn sm" id="pwcp" type="button"></button></div></div>
+<div class="card"><h3 data-i="l7_h"></h3><p data-i="l7_p"></p><canvas id="srt" width="480" height="300" aria-label="Sorting visualizer"></canvas><div class="row" style="margin-top:10px"><button class="btn sm" id="salg" type="button"></button><button class="btn sm" id="sshuf" type="button"></button><button class="btn sm" id="sgo" type="button"></button></div></div>
 </div>
 </section></div></div>
 
@@ -324,10 +328,10 @@ areas:[["Inteligência artificial e machine learning","Exploração e aplicaçã
 demo_note:"Itens com a etiqueta “Demonstrativo” são exemplos e não representam produtos reais da AUREVANT.",demo:"Demonstrativo",real:"Real",all:"Todos",
 cat:{apps:"Aplicativos",games:"Jogos",ai:"Inteligência artificial",tools:"Sistemas e ferramentas",research:"Pesquisa e experimentação"},
 st:{live:"No ar",concept:"Conceito",development:"Em desenvolvimento",prototype:"Protótipo"},details:"Ver detalhes",close:"Fechar",none:"Nenhum projeto neste filtro.",
-lab_h:"Laboratório de inovação",lab_p:"Protótipos, experimentos, conceitos e pesquisas: o espaço de exploração da AUREVANT. Abaixo, três demos que rodam direto no seu navegador.",lab_note:"Demos são brinquedos educativos, não produtos.",
+lab_h:"Laboratório de inovação",lab_p:"Protótipos, experimentos, conceitos e pesquisas: o espaço de exploração da AUREVANT. Abaixo, sete demos que rodam direto no seu navegador.",lab_note:"Demos são brinquedos educativos, não produtos.",
 l1_h:"Gerador de paletas",l1_p:"Mova o matiz e escolha uma harmonia. Clique numa cor para copiar o código.",pmodes:["Análoga","Complementar","Tríade","Monocromática"],prand:"Aleatório",pcopied:"Copiado: ",pfail:"Não foi possível copiar: ",
 l2_h:"Simulador de partículas",l2_p:"Mova o ponteiro sobre o quadro para atrair as partículas.",simon:"Pausar",simoff:"Iniciar",
-l3_h:"Mini modelo de linguagem",l3_p:"Um modelo de bigramas treinado num texto minúsculo: dado uma palavra, mostra as próximas mais prováveis.",l3_in:"Digite uma palavra (ex.: aurevant)",lm_none:"Palavra fora do vocabulário. Tente: aurevant, a, o, com.",lm_gen:"Gerar texto",
+l3_h:"Mini modelo de linguagem",l3_p:"Um modelo de bigramas treinado num texto minúsculo: dado uma palavra, mostra as próximas mais prováveis.",l3_in:"Digite uma palavra (ex.: aurevant)",lm_none:"Palavra fora do vocabulário. Tente: aurevant, a, o, com.",lm_gen:"Gerar texto",l4_h:"Contraste de cores (WCAG)",l4_p:"Escolha cor do texto e do fundo para ver a razão de contraste e se passa nos níveis AA e AAA.",l4_fg:"Texto",l4_bg:"Fundo",l4_sample:"Amostra",l4_aa:"AA, texto normal (4,5:1)",l4_aaa:"AAA, texto normal (7:1)",l4_big:"AA, texto grande (3:1)",pass:"Passa",fail:"Falha",l5_h:"Jogo da Vida",l5_p:"Autômato celular de Conway. Clique ou arraste no quadro para criar e apagar células.",life_on:"Pausar",life_off:"Iniciar",life_rnd:"Aleatório",life_clr:"Limpar",life_gen:"Geração: ",l6_h:"Gerador de senhas",l6_p:"Senhas geradas no seu navegador com aleatoriedade criptográfica. Nada é enviado nem guardado.",pw_len:"Tamanho: ",pw_num:"Números",pw_sym:"Símbolos",pw_gen:"Gerar",pw_copy:"Copiar",pw_ok:"Copiado",pw_bits:" bits de entropia",pw_str:["Fraca","Razoável","Forte","Muito forte"],l7_h:"Visualizador de ordenação",l7_p:"Veja algoritmos de ordenação trabalhando passo a passo.",srt_algo:["Bolha","Inserção","Seleção"],srt_shuf:"Embaralhar",srt_go:"Ordenar",
 pl_h:"Plataforma digital",pl_p:"Roadmap público: o que já foi entregue, o que está em andamento e o que ainda é só planejamento.",pl_note:"Itens marcados como Planejado ainda não existem.",rs:{done:"Entregue",doing:"Em andamento",planned:"Planejado"},
 dev_p:"Notas de desenvolvimento do site e dos projetos da AUREVANT.",
 c_note:"Os canais oficiais de contato ainda não foram configurados.",c_note2:"Fale com a gente pelos canais abaixo ou pelo formulário.",f_name:"Nome",f_mail:"E-mail",f_subj:"Assunto",f_msg:"Mensagem",f_send:"Enviar",f_priv:"Ao enviar, você concorda com o uso dos dados apenas para responder sua mensagem.",
@@ -345,10 +349,10 @@ areas:[["Artificial intelligence & machine learning","Exploring and applying AI 
 demo_note:"Items tagged “Demo” are examples and do not represent real AUREVANT products.",demo:"Demo",real:"Real",all:"All",
 cat:{apps:"Apps",games:"Games",ai:"Artificial intelligence",tools:"Systems & tools",research:"Research & experimentation"},
 st:{live:"Live",concept:"Concept",development:"In development",prototype:"Prototype"},details:"View details",close:"Close",none:"No projects match this filter.",
-lab_h:"Innovation lab",lab_p:"Prototypes, experiments, concepts and research: AUREVANT’s space for exploration. Below, three demos that run right in your browser.",lab_note:"Demos are educational toys, not products.",
+lab_h:"Innovation lab",lab_p:"Prototypes, experiments, concepts and research: AUREVANT’s space for exploration. Below, seven demos that run right in your browser.",lab_note:"Demos are educational toys, not products.",
 l1_h:"Palette generator",l1_p:"Move the hue and pick a harmony. Click a color to copy its code.",pmodes:["Analogous","Complementary","Triad","Monochrome"],prand:"Random",pcopied:"Copied: ",pfail:"Could not copy: ",
 l2_h:"Particle simulator",l2_p:"Move the pointer over the frame to attract the particles.",simon:"Pause",simoff:"Start",
-l3_h:"Tiny language model",l3_p:"A bigram model trained on a tiny text: given a word, it shows the most likely next words.",l3_in:"Type a word (e.g. aurevant)",lm_none:"Word not in vocabulary. Try: aurevant, the, with.",lm_gen:"Generate text",
+l3_h:"Tiny language model",l3_p:"A bigram model trained on a tiny text: given a word, it shows the most likely next words.",l3_in:"Type a word (e.g. aurevant)",lm_none:"Word not in vocabulary. Try: aurevant, the, with.",lm_gen:"Generate text",l4_h:"Color contrast (WCAG)",l4_p:"Pick text and background colors to see the contrast ratio and whether it passes AA and AAA.",l4_fg:"Text",l4_bg:"Background",l4_sample:"Sample",l4_aa:"AA, normal text (4.5:1)",l4_aaa:"AAA, normal text (7:1)",l4_big:"AA, large text (3:1)",pass:"Pass",fail:"Fail",l5_h:"Game of Life",l5_p:"Conway’s cellular automaton. Click or drag on the board to add and erase cells.",life_on:"Pause",life_off:"Start",life_rnd:"Random",life_clr:"Clear",life_gen:"Generation: ",l6_h:"Password generator",l6_p:"Passwords generated in your browser with cryptographic randomness. Nothing is sent or stored.",pw_len:"Length: ",pw_num:"Numbers",pw_sym:"Symbols",pw_gen:"Generate",pw_copy:"Copy",pw_ok:"Copied",pw_bits:" bits of entropy",pw_str:["Weak","Fair","Strong","Very strong"],l7_h:"Sorting visualizer",l7_p:"Watch sorting algorithms work step by step.",srt_algo:["Bubble","Insertion","Selection"],srt_shuf:"Shuffle",srt_go:"Sort",
 pl_h:"Digital platform",pl_p:"Public roadmap: what has shipped, what is in progress and what is still only planning.",pl_note:"Items marked Planned do not exist yet.",rs:{done:"Shipped",doing:"In progress",planned:"Planned"},
 dev_p:"Development notes for the AUREVANT site and projects.",
 c_note:"Official contact channels have not been configured yet.",c_note2:"Reach us through the channels below or the form.",f_name:"Name",f_mail:"Email",f_subj:"Subject",f_msg:"Message",f_send:"Send",f_priv:"By sending, you agree your data is used only to reply to your message.",
@@ -373,9 +377,23 @@ const onView=n=>$("#v-"+n).classList.contains("on");
 const ACCENTS=[["red","#F20D20"],["orange","#ea580b"],["yellow","#e9b308"],["green","#17a34a"],["blue","#2563ea"],["purple","#7b3aec"],["pink","#da2778"],["gray","#717179"]];
 let ACCENT="#F20D20";
 function setTheme(m){document.documentElement.dataset.theme=m;ls.set("av-theme",m);const b=$("#theme");b.textContent=m==="dark"?"☀":"☾";const s=t(m==="dark"?"th_dark":"th_light");b.setAttribute("aria-label",s);b.title=s;$('meta[name=theme-color]').setAttribute("content",m==="dark"?"#050505":"#f6f6f8")}
-function setAccent(hex){if(!/^#[0-9a-f]{6}$/i.test(hex))return false;ACCENT=hex;document.documentElement.style.setProperty("--red",hex);document.documentElement.style.setProperty("--on",onColor(hex));ls.set("av-acc",hex);accSync();const s=t("acc");$("#acc").setAttribute("aria-label",s);$("#acc").title=s;drawOrbit(.8);return true}
+const TINT={};
+function applyLg(k){document.querySelectorAll('[data-lg="'+k+'"]').forEach(e=>{e.style.backgroundImage='url("'+(TINT[k]||LOGO[k])+'")'})}
+function tintApps(){const hx=ACCENT,m=/^#([0-9a-f]{6})$/i.exec(hx);if(!m)return;const n=parseInt(m[1],16),R=n>>16&255,G=n>>8&255,B=n&255;
+Object.keys(LOGO).forEach(k=>{if(hx.toLowerCase()==="#f20d20"){delete TINT[k];applyLg(k);return}
+const im=new Image();im.onload=()=>{try{const c=document.createElement("canvas");c.width=im.naturalWidth;c.height=im.naturalHeight;const x=c.getContext("2d");x.drawImage(im,0,0);const d=x.getImageData(0,0,c.width,c.height),a=d.data;
+for(let i=0;i<a.length;i+=4){const r=a[i],g=a[i+1],b=a[i+2],mn=Math.min(g,b);if(r-mn<8)continue;const t=Math.min(1,(r-mn)/251);a[i]=Math.min(255,mn+R*t);a[i+1]=Math.min(255,mn+G*t);a[i+2]=Math.min(255,mn+B*t)}
+x.putImageData(d,0,0);TINT[k]=c.toDataURL("image/png");applyLg(k)}catch(e){}};im.src=LOGO[k]})}
+function tintLogos(){const hx=ACCENT,m=/^#([0-9a-f]{6})$/i.exec(hx);if(!m)return;const n=parseInt(m[1],16),R=n>>16&255,G=n>>8&255,B=n&255;
+const els=[...document.querySelectorAll(".brand img,.stage img")].concat([...document.querySelectorAll('link[rel="icon"],link[rel="apple-touch-icon"]')]);
+els.forEach(el=>{const attr=el.tagName==="LINK"?"href":"src";if(!el.dataset.o)el.dataset.o=el.getAttribute(attr);const src=el.dataset.o;
+if(hx.toLowerCase()==="#f20d20"){el.setAttribute(attr,src);return}
+const im=new Image();im.onload=()=>{try{const c=document.createElement("canvas");c.width=im.naturalWidth;c.height=im.naturalHeight;const x=c.getContext("2d");x.drawImage(im,0,0);const d=x.getImageData(0,0,c.width,c.height),a=d.data;
+for(let i=0;i<a.length;i+=4){if(!a[i+3])continue;const r=a[i],g=a[i+1],b=a[i+2];if(r-Math.max(g,b)<20)continue;const t=Math.min(1,Math.max(0,(255-g)/242));a[i]=255+(R-255)*t;a[i+1]=255+(G-255)*t;a[i+2]=255+(B-255)*t}
+x.putImageData(d,0,0);el.setAttribute(attr,c.toDataURL("image/png"))}catch(e){}};im.src=src})}
+function setAccent(hex){if(!/^#[0-9a-f]{6}$/i.test(hex))return false;ACCENT=hex;document.documentElement.style.setProperty("--red",hex);document.documentElement.style.setProperty("--on",onColor(hex));ls.set("av-acc",hex);accSync();const s=t("acc");$("#acc").setAttribute("aria-label",s);$("#acc").title=s;drawOrbit(.8);tintLogos();tintApps();try{lifeDraw();sortDraw()}catch(e){}return true}
 {let th=ls.get("av-theme");if(!th)th=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";document.documentElement.dataset.theme=th;
-const a=ls.get("av-acc");if(a&&/^#[0-9a-f]{6}$/i.test(a)){ACCENT=a;document.documentElement.style.setProperty("--red",a);document.documentElement.style.setProperty("--on",onColor(a))}}
+const a=ls.get("av-acc");if(a&&/^#[0-9a-f]{6}$/i.test(a)){ACCENT=a;document.documentElement.style.setProperty("--red",a);document.documentElement.style.setProperty("--on",onColor(a));tintLogos();tintApps()}}
 // ===== PROCEDURAL COVERS =====
 function hash(s){let h=2166136261;for(const c of s){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0}
 function rng(a){return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
@@ -434,8 +452,41 @@ let tot=0;for(const v of m.values())tot+=v;
 box.replaceChildren(...[...m].sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k,v])=>{const r=E("div",null,"bar2"),i=E("i");i.style.width=Math.round(v/tot*100)+"%";r.append(E("span",k),i,E("span",Math.round(v/tot*100)+"%"));return r}))}
 $("#lmw").addEventListener("input",lmShow);
 $("#lmgen").onclick=()=>{const ws=lmTok($("#lmw").value);let w=LM.has(ws[ws.length-1])?ws[ws.length-1]:[...LM.keys()][Math.floor(Math.random()*LM.size)];const out=[w];for(let i=0;i<14;i++){const n=lmNext(w);if(!n)break;out.push(n);w=n}let s=out.join(" ");$("#lmg").textContent=s.charAt(0).toUpperCase()+s.slice(1)+"."};
+// ===== LAB 4: CONTRAST =====
+function lum(hex){const n=parseInt(hex.slice(1),16),w=[.2126,.7152,.0722];return[n>>16&255,n>>8&255,n&255].reduce((a,v,i)=>{v/=255;return a+w[i]*(v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4))},0)}
+function ctRender(){const f=$("#cfg").value,b=$("#cbg").value,l1=lum(f),l2=lum(b),r=(Math.max(l1,l2)+.05)/(Math.min(l1,l2)+.05),sm=$("#csample");sm.style.color=f;sm.style.background=b;sm.textContent=t("l4_sample")+" · "+r.toFixed(2)+":1";
+$("#cres").replaceChildren(...[[t("l4_aa"),r>=4.5],[t("l4_aaa"),r>=7],[t("l4_big"),r>=3]].map(([n,ok])=>{const d=E("div",null,"bar2");d.style.gridTemplateColumns="1fr auto";d.append(E("span",n),E("strong",t(ok?"pass":"fail")));return d}))}
+$("#cfg").addEventListener("input",ctRender);$("#cbg").addEventListener("input",ctRender);
+// ===== LAB 5: GAME OF LIFE =====
+const lc=$("#life"),lx=lc.getContext("2d"),LW=48,LH=30,LS=10;let LG=new Uint8Array(LW*LH),lifeOn=!RM,lgen=0,lacc=0,ldown=false,lpaint=1;lc.style.touchAction="none";
+function lifeRand(){for(let i=0;i<LG.length;i++)LG[i]=Math.random()<.28?1:0;lgen=0}
+function lifeStep(){const n=new Uint8Array(LG.length);for(let y=0;y<LH;y++)for(let x=0;x<LW;x++){let c=0;for(let dy=-1;dy<2;dy++)for(let dx=-1;dx<2;dx++)if(dx||dy)c+=LG[((y+dy+LH)%LH)*LW+(x+dx+LW)%LW];n[y*LW+x]=c===3||(LG[y*LW+x]&&c===2)?1:0}LG=n;lgen++}
+function lifeDraw(){lx.fillStyle="#050505";lx.fillRect(0,0,480,300);lx.fillStyle=ACCENT;for(let y=0;y<LH;y++)for(let x=0;x<LW;x++)if(LG[y*LW+x])lx.fillRect(x*LS+1,y*LS+1,LS-2,LS-2);$("#lgen").textContent=t("life_gen")+lgen}
+function lifeTxt(){$("#lgo").textContent=t(lifeOn?"life_on":"life_off");$("#lrnd").textContent=t("life_rnd");$("#lclr").textContent=t("life_clr");lifeDraw()}
+function lifeCell(e){const r=lc.getBoundingClientRect();return[Math.floor((e.clientX-r.left)/r.width*LW),Math.floor((e.clientY-r.top)/r.height*LH)]}
+function lifePaint(e){const[x,y]=lifeCell(e);if(x>=0&&x<LW&&y>=0&&y<LH){LG[y*LW+x]=lpaint;lifeDraw()}}
+lc.addEventListener("pointerdown",e=>{const[x,y]=lifeCell(e);lpaint=LG[y*LW+x]?0:1;ldown=true;lc.setPointerCapture(e.pointerId);lifePaint(e)});
+lc.addEventListener("pointermove",e=>{if(ldown)lifePaint(e)});lc.addEventListener("pointerup",()=>{ldown=false});lc.addEventListener("pointercancel",()=>{ldown=false});
+tasks.life={active:()=>lifeOn&&onView("lab")&&!document.hidden,run:dt=>{lacc+=dt;if(lacc>.12){lacc=0;lifeStep();lifeDraw()}}};
+$("#lgo").onclick=()=>{lifeOn=!lifeOn;lifeTxt();kick()};$("#lrnd").onclick=()=>{lifeRand();lifeDraw()};$("#lclr").onclick=()=>{LG.fill(0);lgen=0;lifeDraw()};lifeRand();
+// ===== LAB 6: PASSWORD =====
+function pwGen(){const n=+$("#pwlen").value;let cs="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";if($("#pwnum").checked)cs+="0123456789";if($("#pwsym").checked)cs+="!@#$%&*?-_+=";const lim=Math.floor(4294967296/cs.length)*cs.length,a=new Uint32Array(1);let out="";while(out.length<n){crypto.getRandomValues(a);if(a[0]<lim)out+=cs[a[0]%cs.length]}
+$("#pwout").textContent=out;const bits=Math.round(n*Math.log2(cs.length));$("#pwinfo").textContent=t("pw_str")[bits<50?0:bits<80?1:bits<110?2:3]+" · "+bits+t("pw_bits");$("#pwlenl").textContent=t("pw_len")+n;$("#pwgen").textContent=t("pw_gen");$("#pwcp").textContent=t("pw_copy")}
+for(const id of["pwlen","pwnum","pwsym"])$("#"+id).addEventListener("input",pwGen);$("#pwgen").onclick=pwGen;
+$("#pwcp").onclick=async()=>{try{await navigator.clipboard.writeText($("#pwout").textContent);$("#pwcp").textContent=t("pw_ok");setTimeout(()=>{$("#pwcp").textContent=t("pw_copy")},1500)}catch(e){}};
+// ===== LAB 7: SORTING =====
+const stc=$("#srt"),stx=stc.getContext("2d"),SN=40;let SA=[],salg=0,sgen=null,sact=[],sdone=false;
+function sortDraw(){stx.fillStyle="#050505";stx.fillRect(0,0,480,300);const w=480/SN;for(let i=0;i<SN;i++){stx.fillStyle=sdone||sact.includes(i)?ACCENT:"#555";const h=SA[i]/SN*280;stx.fillRect(i*w+1,300-h,w-2,h)}}
+function sortReset(){SA=Array.from({length:SN},(_,i)=>i+1);for(let i=SN-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[SA[i],SA[j]]=[SA[j],SA[i]]}sgen=null;sact=[];sdone=false;sortDraw()}
+function*sBub(){for(let i=0;i<SN;i++)for(let j=0;j<SN-i-1;j++){sact=[j,j+1];if(SA[j]>SA[j+1])[SA[j],SA[j+1]]=[SA[j+1],SA[j]];yield}}
+function*sIns(){for(let i=1;i<SN;i++){let j=i;while(j>0&&SA[j-1]>SA[j]){[SA[j-1],SA[j]]=[SA[j],SA[j-1]];sact=[j-1,j];j--;yield}}}
+function*sSel(){for(let i=0;i<SN-1;i++){let m=i;for(let j=i+1;j<SN;j++){sact=[m,j];if(SA[j]<SA[m])m=j;yield}[SA[i],SA[m]]=[SA[m],SA[i]];sact=[i,m];yield}}
+const SALGS=[sBub,sIns,sSel];
+function sortTxt(){$("#salg").textContent=t("srt_algo")[salg];$("#sshuf").textContent=t("srt_shuf");$("#sgo").textContent=t("srt_go")}
+tasks.sort={active:()=>!!sgen&&onView("lab")&&!document.hidden,run:dt=>{for(let k=0;k<3;k++){if(sgen.next().done){sgen=null;sact=[];sdone=true;break}}sortDraw()}};
+$("#salg").onclick=()=>{salg=(salg+1)%SALGS.length;sortReset();sortTxt()};$("#sshuf").onclick=sortReset;$("#sgo").onclick=()=>{if(sdone)sortReset();if(!sgen){sgen=SALGS[salg]();kick()}};sortReset();
 // ===== CARDS / LISTS =====
-function pcover(p,cv){if(p.logo){cv.style.backgroundImage=`url("${p.logo}")`;cv.style.backgroundSize="contain";cv.style.backgroundRepeat="no-repeat";cv.style.backgroundColor="#000"}else cv.style.backgroundImage=cover(p)}
+function pcover(p,cv){if(p.logo){const lk=Object.keys(LOGO).find(q=>LOGO[q]===p.logo);if(lk)cv.dataset.lg=lk;cv.style.backgroundImage=`url("${(lk&&TINT[lk])||p.logo}")`;cv.style.backgroundSize="contain";cv.style.backgroundRepeat="no-repeat";cv.style.backgroundColor="#000"}else cv.style.backgroundImage=cover(p)}
 function pcard(p){const c=E("article",null,"card");const cv=E("div",null,"cover");pcover(p,cv);c.append(cv);
 c.append(E("span",t("cat")[p.cat],"pill"),E("span",t("st")[p.st],"pill"),...(p.avail?[E("span",t("avail"),"pill real")]:[]),E("h3",p.n),E("p",p[lang]));
 const b=E("button",t("details"),"btn sm");b.type="button";b.onclick=()=>detail(p);c.append(b);
@@ -466,7 +517,7 @@ $("#dlog").replaceChildren(...DEVLOG.map(d=>{const li=E("li");li.dataset.s="done
 const vb="v"+VERSION+" · "+t("ver");$("#verbadge").textContent=vb;$("#fver").textContent="v"+VERSION;
 const has=CONFIG.email||CONFIG.endpoint||CONFIG.links.length;$('[data-i="c_note"]').textContent=t(has?"c_note2":"c_note");
 $("#clinks").replaceChildren(...[...(CONFIG.email?[{label:CONFIG.email,url:"mailto:"+CONFIG.email}]:[]),...CONFIG.links.filter(l=>/^https:\/\//.test(l.url))].map(l=>{const a=E("a",l.label,"btn sm");a.href=l.url;if(!l.url.startsWith("mailto:")){a.rel="noopener noreferrer";a.target="_blank"}return a}));
-$("#faqlist").replaceChildren(...t("faq").map(([q,a])=>{const d=E("details"),sm=E("summary",q);d.append(sm,E("p",a));return d}));$("#prand").textContent=t("prand");swRender();renderPal();$("#simgo").textContent=t(simOn?"simon":"simoff");lmBuild();lmShow();$("#lmgen").textContent=t("lm_gen");
+$("#faqlist").replaceChildren(...t("faq").map(([q,a])=>{const d=E("details"),sm=E("summary",q);d.append(sm,E("p",a));return d}));$("#prand").textContent=t("prand");swRender();renderPal();$("#simgo").textContent=t(simOn?"simon":"simoff");lmBuild();lmShow();$("#lmgen").textContent=t("lm_gen");ctRender();lifeTxt();pwGen();sortTxt();
 route(false)}
 function route(go=true){
 const id=curPage(),h=location.hash.slice(1)||"home";
@@ -476,7 +527,7 @@ if(LEGAL[id]){const[ti,secs]=LEGAL[id][lang];$("#legal").replaceChildren(E("h1",
 document.title=(id==="404"?"404":LEGAL[id]?LEGAL[id][lang][0]:t("nav_"+id))+" — AUREVANT";
 $("#nav").classList.remove("open");$("#burger").setAttribute("aria-expanded","false");
 if(go){window.scrollTo(0,0);$("#main").focus({preventScroll:true})}
-if(id==="home")sizeOrbit();if(id==="lab")simDraw();
+if(id==="home")sizeOrbit();if(id==="lab"){simDraw();lifeDraw();sortDraw()}
 kick()}
 // ===== EVENTS =====
 $("#lang").onclick=()=>{lang=lang==="pt"?"en":"pt";ls.set("av-lang",lang);render()};
